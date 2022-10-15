@@ -50,6 +50,11 @@
       width: 100px;
     }
 
+    .btn-check:focus+.btn,
+    .btn:focus{
+      box-shadow: none;
+    }
+
     .btn-primary:hover{
       background-color: #212529;
       border: none;
@@ -58,7 +63,33 @@
     .btn-primary{
       background-color: #212529;
       border: none;
-    }    
+    }  
+    
+    .card{
+      border: none;
+      color: teal;
+      width: 18rem; 
+         
+    }
+
+    .card img:hover {
+      /* border: 1px solid grey; */
+      opacity: 100%;
+      transform: scale(1.2);
+    }
+
+    .gutters{
+      text-decoration: none;
+      color: rgb(134, 131, 126);
+    }
+
+    .carousel-caption{
+    color: rosybrown;
+  }
+  .nav-text{
+    color: pink;
+  }
+  
     </style>
   </head>
 
@@ -136,12 +167,72 @@
         Carousel comes here
     </div>
 
-    <div>
-      thumbnails come here!
+    <div id="card-section" class="container" style="padding-top: 100px; padding-left: 100px;">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img src="Images/category1.jpeg" class="card-img-top" width="200" height="200" alt="...">
+          <div class="card-body" >
+            <h4 class="card-title">20 Carat Gold circular hoop ear rings</h4>
+            <p class="card-text">Modern and sleek design suitable to pair up on all your special occasions</p><br><br>
+            <a href="#" class="btn btn-primary">Shop for $249</a>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="Images/category2.webp" class="card-img-top" width="200" height="200" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Flower shaped pendant - Gold</h4>
+            <p class="card-text">Contemporary yet classic design at affordable prices, with all customizations available at your convenience</p><br>
+            <a href="#" class="btn btn-primary">Shop for $159</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="Images/catgeory3.jpeg" class="card-img-top" width="200" height="200" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Gold ring studded with uncut diamonds</h4>
+            <p class="card-text">Be it gifting, or festive occasion, we have covered everything for you.</p><br><br>
+            <a href="#" class="btn btn-primary">Shop for $899</a>
+            </div>
+            </div>
+        </div>
+      </div>
     </div>
 
-    <div>
-      Cards come here
+    <div class="container overflow-hidden" style="padding: 100px 0px 20px 0px;">
+      <div class="row gy-5">
+        <div class="col-6">
+          <div class="p-3 bg-light">
+            <img src="Images/sale.jpeg" class="card-img-top" width="200" height="400" alt="...">
+            <span class="onimage"><h1>Our favourites for Moms</h1></span> 
+            <a class="gutters" href="#"><i>Checkout our mother's day offers</i></a> 
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 bg-light ">
+            <img src="Images/beatsstudio.jpg" class="card-img-top" width="200" height="400" alt="...">
+            <span class="onimage"><h1>New Beats Studio Buds</h1></span> 
+            <a class="gutters" href="#"><i>Win exciting prices everytime you shop from our store</i></a> 
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 bg-light">
+            <img src="Images/blackfriday.jpeg" class="card-img-top" width="200" height="400" alt="...">
+            <span class="onimage"><h1>Pre-book your orders now</h1></span> 
+            <a class="gutters" href="#"><i>Grab exclusive deals for the coming black friday</i></a> 
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 bg-light">
+            <img src="Images/clearance.jpg" class="card-img-top" width="200" height="400" alt="...">
+            <span class="onimage"><h1>Clearance Sales</h1></span> 
+            <a class="gutters" href="#"><i>Keep an eye out for our monthy clearance sales</i></a> 
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
