@@ -72,7 +72,7 @@ class Login extends Component {
           >
             <h6>No account ? Click here to Sign Up!</h6>
           </div>
-          <Button variant="primary" type="submit" onClick={this.login}>
+          <Button variant="primary" className="bg-secondary" type="submit" onClick={this.login}>
             Sign In
           </Button>
         </div>
