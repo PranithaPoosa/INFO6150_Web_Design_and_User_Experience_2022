@@ -41,22 +41,29 @@ class Navigation extends Component {
     const { cartStore } = this.props;
     const { items = [] } = cartStore;
     const username = localStorage.getItem("shopping-app-user-name");
+    console.log(username === 'admin')
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" className="bg-info">
+        <Navbar collapseOnSelect expand="lg"  style={{backgroundColor: "#8ecae6"}}>
           <Container>
             <Navbar.Brand
               onClick={() => this.goToPage("/")}
               className="pointer"
+              style={{color:'#ffff'}}
             >
-            24Carat
+               <h1 className="link-light logo">
+              <p>
+                <span style={{color:'#005073'}}>24</span>
+                <span style={{color:'#005073'}}>Carat</span>
+              </p>
+            </h1>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
                 {ROUTES.map((route) => {
                   return (
-                    <Nav.Link
+                    <Nav.Link style={{color:'#ffff', fontSize:'20px'}}
                       onClick={() => this.goToPage(route.url)}
                       key={route.displayName}
                     >
@@ -67,11 +74,12 @@ class Navigation extends Component {
                   );
                 })}
               </Nav>
-              <Nav className="align-items-center">
+              <Nav className="align-items-center" style={{color:'#ffff'}}>
                 {username && (
                   <NavDropdown
-                    title={username ? username : ""}
+                    title={username ? <span style={{color:'#005073'}}>{username}</span> : ""}
                     id="basic-nav-dropdown"
+                    
                   >
                     <NavDropdown.Item onClick={() => this.logout()}>
                       Logout
@@ -79,16 +87,16 @@ class Navigation extends Component {
                   </NavDropdown>
 
                   
-                )}  
+                )}
+                {username && username === 'admin' && (  
                 <Button
-                    title={username ? username : ""}
-                    id="basic-nav-dropdown"
+                    variant="secondary"
+                    className="d-sm-flex align-items-center"
                     onClick={() => this.addProduct()}
                   >
-                   
-                      Add Product
-                    
+                      Add Product 
                   </Button>
+                )}
   
 
                 {!username && (
@@ -104,6 +112,7 @@ class Navigation extends Component {
                       variant="secondary"
                       className="d-sm-flex align-items-center mx-2"
                       onClick={() => this.goToSignUp()}
+                      style={{color:'#ffff'}}
                     >
                       Sign Up
                     </Button>
