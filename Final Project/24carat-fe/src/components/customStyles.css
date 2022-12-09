@@ -20,11 +20,11 @@
 }
 
 .carousel-control-prev {
-    background-color: #ffff;
+    background-color: rgb(235, 232, 232);
 }
 
 .carousel-control-next{
-    background-color: #ffff;
+    background-color: rgb(235, 232, 232);
 }
 
 .noItemsInBag {
