@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 const ROUTES = [
   { displayName: "Home", url: "/" },
-  { displayName: "Deal of the day", url: "/dealoftheday" },
+  { displayName: "Deals of the day", url: "/dealoftheday" },
   { displayName: "Top Deals", url: "/topdeals" },
   // { displayName: "Top Brands", url: "/topbrands" },
 ];
@@ -33,19 +33,23 @@ class Navigation extends Component {
     this.props.history.push("/");
   };
 
+  addProduct=() => {
+    this.props.history.push("/Adminpage");
+  }
+
   render() {
     const { cartStore } = this.props;
     const { items = [] } = cartStore;
     const username = localStorage.getItem("shopping-app-user-name");
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" className="bg-info">
           <Container>
             <Navbar.Brand
               onClick={() => this.goToPage("/")}
               className="pointer"
             >
-              BuyEasy
+            24Carat
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -58,6 +62,8 @@ class Navigation extends Component {
                     >
                       {route.displayName}
                     </Nav.Link>
+
+
                   );
                 })}
               </Nav>
@@ -71,7 +77,20 @@ class Navigation extends Component {
                       Logout
                     </NavDropdown.Item>
                   </NavDropdown>
-                )}
+
+                  
+                )}  
+                <Button
+                    title={username ? username : ""}
+                    id="basic-nav-dropdown"
+                    onClick={() => this.addProduct()}
+                  >
+                   
+                      Add Product
+                    
+                  </Button>
+  
+
                 {!username && (
                   <>
                     <Button
@@ -91,13 +110,13 @@ class Navigation extends Component {
                   </>
                 )}
                 <Nav.Link>
-                  <Button
+                  <Button style={{backgroundColor:'lightslategrey'}}
                     variant="primary"
                     className="d-sm-flex align-items-center"
                     onClick={() => this.goToCart()}
                   >
                     Cart
-                    <Bag className="mx-sm-2" />
+                    <Bag className="mx-sm-2"/>
                     {items.length > 0 ? items.length : ""}
                   </Button>
                 </Nav.Link>
