@@ -1,5 +1,5 @@
 .home-image {
-    max-height: 250px;
+    max-height: 200px;
     min-height: 250px;
     width: auto;
 }
@@ -37,6 +37,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    
 }
 
 
