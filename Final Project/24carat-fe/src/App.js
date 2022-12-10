@@ -6,7 +6,6 @@ import {
   Home,
   TopDeals,
   DealOfTheday,
-  TopBrands,
   ProductDescription,
   ShoppingCart,
   Login,
@@ -29,7 +28,6 @@ function App() {
             <Route exact path="/cart" component={ShoppingCart} />
             <Route exact path="/dealoftheday" component={DealOfTheday} />
             <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/topbrands" component={TopBrands} />
             <Route exact path="/Adminpage" component={Adminpage} />
             <Route
               path="/description/:productID"
