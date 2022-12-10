@@ -119,8 +119,8 @@ class Navigation extends Component {
                   </>
                 )}
                 <Nav.Link>
-                  <Button style={{backgroundColor:'lightslategrey'}}
-                    variant="primary"
+                  <Button
+                    variant="secondary"
                     className="d-sm-flex align-items-center"
                     onClick={() => this.goToCart()}
                   >
