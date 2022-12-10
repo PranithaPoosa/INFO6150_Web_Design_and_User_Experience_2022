@@ -21,6 +21,7 @@ function FeedbackForm() {
         )
           .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
+            alert("feedback submitted!")
           })
           .catch((err) => {
             console.log('FAILED...', err);
