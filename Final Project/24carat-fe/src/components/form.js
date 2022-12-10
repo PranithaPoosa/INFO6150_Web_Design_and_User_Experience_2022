@@ -66,7 +66,7 @@ function FeedbackForm() {
   
 </form>
 
-<h1>FEEDBACK FORM</h1>
+<h1 style={{color:"white"}}>FEEDBACK FORM</h1>
 <Form onSubmit={onSubmit}>
 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Name</Form.Label>

@@ -12,7 +12,7 @@ class Login extends Component {
       password: "",
     };
   }
-
+  
   goToSignUp = () => {
     this.props.history.push("/signup");
   };
