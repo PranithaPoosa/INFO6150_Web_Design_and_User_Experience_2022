@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Alert } from "react-bootstrap";
 import { SIGN_UP_URL } from "../API";
 import axios from "axios";
 
@@ -38,7 +38,7 @@ class SignUp extends Component {
         this.props.history.push("/");
       })
       .catch((err) => {
-        console.log("error");
+        return alert("Error: Signup failed");
       });
   };
 
@@ -53,6 +53,7 @@ class SignUp extends Component {
           <Form.Group className="mb-3">
             <Form.Label>Name</Form.Label>
             <Form.Control
+              required
               type="text"
               placeholder="Enter Name"
               onChange={(e) => this.inputName(e.target.value)}
@@ -62,6 +63,7 @@ class SignUp extends Component {
           <Form.Group className="mb-3">
             <Form.Label>Email</Form.Label>
             <Form.Control
+              required
               type="text"
               placeholder="Enter Email"
               onChange={(e) => this.inputEmail(e.target.value)}
@@ -71,6 +73,7 @@ class SignUp extends Component {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
+              required
               type="password"
               placeholder="Password"
               onChange={(e) => this.inputPassword(e.target.value)}
@@ -79,7 +82,7 @@ class SignUp extends Component {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Re-enter Password</Form.Label>
-            <Form.Control type="password" placeholder="Re-enter Password" />
+            <Form.Control required type="password" placeholder="Re-enter Password" />
           </Form.Group>
 
           <Button variant="primary" className="bg-secondary" type="submit" onClick={this.signUpWithData}>
