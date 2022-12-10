@@ -28,7 +28,7 @@ function Body() {
 
   return (
     <div>
-      <h4>Bonus Deals of the day</h4>
+      <h4 style={{color: "white"}}>Bonus Deals of the day</h4>
       <Row xs={4} md={3} className="g-4">
         {Array.from({ length: 6 }).map((_, idx) => (
           <Col key={idx}>

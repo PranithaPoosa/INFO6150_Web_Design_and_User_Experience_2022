@@ -37,8 +37,7 @@ class Home extends React.Component {
   render() {
     const { items = [] } = this.state;
     return (
-      <div>
-        <h1>{items.length}</h1>
+      <div style={{backgroundColor: "#023047"}}>
         <Container>
           <Row className="justify-content-evenly">
             {items.map((item) => {

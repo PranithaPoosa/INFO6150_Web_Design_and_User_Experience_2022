@@ -33,12 +33,7 @@ function FeedbackForm() {
   return (
     <div>
         <div><p><h6></h6></p></div>
-      <form onSubmit={onSubmit}>
-      
-  {}
-  {}
-  {}
-  {}
+      <form onSubmit={onSubmit}
   
 </form>
 

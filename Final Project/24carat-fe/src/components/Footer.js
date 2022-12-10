@@ -4,17 +4,17 @@ import { Row, Col } from "react-bootstrap";
 class Footer extends Component {
   render() {
     return (
-      <div className="bg-info mt-sm-3 p-sm-4" >
+      <div className=" mt-sm-3 p-sm-4" style={{backgroundColor: "#8ecae6"}}>
         <Row>
           
           <Col sm>
             <h2 className="link-light logo">
               <p>
-                <span className="text-primary">24</span>
-                <span className="text-warning">Carat</span>
+                <span style={{color:'#005073'}}>24</span>
+                <span style={{color:'#005073'}}>Carat</span>
               </p>
             </h2>
-            <p className="link-light">Your search ends here!!!</p>
+            <p className="link-dark" >Your search ends here!!!</p>
           </Col>
 
           <Col sm>
@@ -23,19 +23,19 @@ class Footer extends Component {
                 <h2 className="ftco-heading-2 link-light">My Easy Buy</h2>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       View and Rewards
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Special Offers
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Sign in or Created account
                     </a>
@@ -50,19 +50,19 @@ class Footer extends Component {
                 <h2 className="ftco-heading-2 link-light">Credit Cards</h2>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Apply for Easy card
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Credit Cards Offers
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Make Payment through Discover Card
                     </a>
@@ -79,19 +79,19 @@ class Footer extends Component {
                 </h2>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Order status
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Shipping, Delivery & Store pickups
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
                       Returns and Exchange rules
                     </a>
@@ -107,13 +107,13 @@ class Footer extends Component {
                 <div className="block-23 mb-3">
                   <span className="glyphicon glyphicon-map-marker"></span>
                   <span className="text"> 101 Dude St. Mountain View,</span>
-                  <a href="#">
+                  <a href="#" style={{color:'black'}}>
                     <span className="glyphicon glyphicon-earphone"></span>
                     <span className="text"> +2 392 3929 210</span>
                   </a>
-                  <a href="#">
+                  <a href="#" style={{color:'black'}}>
                     <span className="glyphicon glyphicon-envelope"></span>
-                    <span className="text"> info@buyeasy.com</span>
+                    <span className="text"> info@b24carat.com</span>
                   </a>
                 </div>
               </div>
