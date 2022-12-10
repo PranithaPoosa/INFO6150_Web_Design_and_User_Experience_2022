@@ -33,9 +33,7 @@ class Navigation extends Component {
     this.props.history.push("/");
   };
 
-  addProduct=() => {
-    this.props.history.push("/Adminpage");
-  }
+  
 
   render() {
     const { cartStore } = this.props;
