@@ -23,43 +23,43 @@ function Adminpage(){
 //form for admin to access
 
     return(
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} style = {{padding: '5% 25%'}}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Name of the Product</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control type='text'
                 name='from_name'
-                placeholder='Your Name'
+                placeholder='Name of the product'
                  />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Price</Form.Label>
                 <Form.Control type='text'
                 name='reply_to'
-                placeholder='Your Email'/>
+                placeholder='Price of the product'/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Images</Form.Label>
                 <Form.Control as='textarea' rows={3}
                 name='message'
-                placeholder='Your message' />
+                placeholder='Enter comma separated image urls' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Description</Form.Label>
                 <Form.Control type='text'
                 name='message'
-                placeholder='Your message' />
+                placeholder='Description of the product' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Brand</Form.Label>
                 <Form.Control type='text'
                 name='message'
-                placeholder='Your message' />
+                placeholder='Brand' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Category</Form.Label>
                 <Form.Control type='text'
                 name='message'
-                placeholder='Your message' />
+                placeholder='Category, the product belongs to' />
             </Form.Group>
             <Button className="bg-secondary" as="input" type="submit" value="Submit" />{' '}
         </Form>
@@ -67,5 +67,8 @@ function Adminpage(){
     
 
 }
+
+
+
 
 export default Adminpage;
