@@ -23,13 +23,8 @@ function Adminpage(){
 //form for admin to access
 
     return(
-        <Form onSubmit={onSubmit} style = {{padding: '5% 25%'}}>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type='text'
-                name='from_name'
-                placeholder='Name of the product'
-                 />
+        
+        
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Price</Form.Label>
