@@ -19,6 +19,21 @@ function Adminpage(){
         obj['dealOfTheDay'] = false
     axios
       .post("http://localhost:3001/items/save", obj)
+      .then((res) => {
+        if (res.data) {
+            alert("product added successfully")
+        }
+        e.target[0].value = '';
+        e.target[1].value = '';
+        e.target[2].value = '';
+        e.target[3].value = '';
+        e.target[4].value = '';
+        e.target[5].value = '';
+      })
+      .catch((err) => {
+        alert("product addition failed")
+      });
+    
     };
 //form for admin to access
 
