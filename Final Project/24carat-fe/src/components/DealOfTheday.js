@@ -24,8 +24,8 @@ function DealOfTheday() {
   var dayOfWeek = new Date().toLocaleDateString("en-us", { weekday: "long" });
 
   return (
-    <div>
-      <div className="container">
+    <div style={{color:'#023047'}}>
+      <div className="container" style={{backgroundColor:'#023047'}}>
       <div>
         <p></p>
       </div>
