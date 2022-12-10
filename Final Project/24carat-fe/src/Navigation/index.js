@@ -32,10 +32,10 @@ class Navigation extends Component {
     localStorage.clear();
     this.props.history.push("/");
   };
-
   addProduct=() => {
     this.props.history.push("/Adminpage");
   }
+  
 
   render() {
     const { cartStore } = this.props;

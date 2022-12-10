@@ -64,7 +64,7 @@ class Footer extends Component {
                   <li>
                     <a href="#" style={{color:'black'}}>
                       <span className="glyphicon glyphicon-arrow-right"></span>{" "}
-                      Make Payment through Discover Card
+                      Make Payment through Discover card
                     </a>
                   </li>
                 </ul>

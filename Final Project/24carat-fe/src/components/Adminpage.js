@@ -30,6 +30,8 @@ function Adminpage(){
                 name='from_name'
                 placeholder='Name of the product'
                  />
+        
+        
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Price</Form.Label>

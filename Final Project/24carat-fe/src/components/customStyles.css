@@ -1,5 +1,5 @@
 .home-image {
-    max-height: 250px;
+    max-height: 200px;
     min-height: 250px;
     width: auto;
 }
@@ -32,11 +32,12 @@
 }
 
 .noItemsInBag {
-    height: 500px;
+    
     align-items: center;
     display: flex;
     text-align: center;
     justify-content: center;
+    
 }
 
 
