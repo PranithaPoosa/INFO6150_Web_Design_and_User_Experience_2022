@@ -37,7 +37,7 @@ class TopDeals extends React.Component {
   render() {
     const { items = [] } = this.state;
     return (
-      <div>
+      <div style={{backgroundColor:'#023047'}}>
       <Container>
         <Row className="justify-content-evenly">
           {items.map((item) => {

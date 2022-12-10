@@ -24,32 +24,34 @@ function DealOfTheday() {
   var dayOfWeek = new Date().toLocaleDateString("en-us", { weekday: "long" });
 
   return (
-    <div style={{color:'#023047'}}>
+    <div style={{backgroundColor:'#023047'}}>
       <div className="container" style={{backgroundColor:'#023047'}}>
       <div>
         <p></p>
       </div>
 
       <div className="widthSetting" >
-      <p style={{float:'right'}}  >
-        <AccessTimeIcon style={{ fontSize: 20 }} />
-        &nbsp;
-       Time left</p>
-        <div className="widthLeft">
-          {" "}
-          <h2>Hurry! It is {dayOfWeek}'s</h2>
-          <h3><b>DEAL OF THE DAY</b></h3>
-          <h6>
-            <p>Terms and conditions apply*</p>
-          </h6>
-        </div>
-        <div className="widthRightt">
-          <Badge className="timerBadge" bg="secondary">
-            <p></p>
+        <p style={{textAlign:'end', color: "white"}}  >
+          <AccessTimeIcon style={{ fontSize: 20, color: "white" }} />
+          &nbsp;
+        Time left</p>
+        <div style = {{display: 'flex', justifyContent:'space-between'}}>
+          <div className="widthLeft">
+            {" "}
+            <h2 style={{  color: "white" }}>Hurry! It is {dayOfWeek}'s</h2>
+            <h3 style={{  color: "white" }}><b>DEAL OF THE DAY</b></h3>
+            <h6 style={{  color: "white" }}>
+              <p>Terms and conditions apply*</p>
+            </h6>
+          </div>
+          <div className="widthRightt">
+            <Badge className="timerBadge" bg="secondary">
+              <p></p>
+              
+              <CountDownTimer hoursMinSecs={hoursMinSecs} />
             
-            <CountDownTimer hoursMinSecs={hoursMinSecs} />
-          
-          </Badge>
+            </Badge>
+          </div>
         </div>
       </div>
       <div className="Items">

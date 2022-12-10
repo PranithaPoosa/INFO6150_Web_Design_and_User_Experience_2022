@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row, Card, Col, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { Cart2, Trash } from "react-bootstrap-icons";
-import PaypalExpressBtn from "react-paypal-express-checkout";
+import { Cart2, SkipEndBtnFill, Trash } from "react-bootstrap-icons";
+// import PaypalExpressBtn from "react-paypal-express-checkout";
+import { PayPalButton } from "react-paypal-button-v2";
 import "./customStyles.css";
 import { bindActionCreators } from "redux";
 import { removeItemsFromCart, emptyCart } from "../actions/cart";
@@ -27,6 +28,7 @@ class ShoppingCart extends Component {
       paymentInfo: {},
     };
   }
+  
 
   componentDidMount() {
     const isAuthenticatedUser = localStorage.getItem("shopping-app-user-token");
@@ -43,8 +45,25 @@ class ShoppingCart extends Component {
     // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
   };
 
+  cretaeOrder = (data, actions) => {
+    const { cartStore } = this.props;
+    // const { paymentDone = false, paymentError = false } = this.state;
+    const total_bill = cartStore.items
+      .map((item) => item.pricing)
+      .reduce((acc, val) => acc + val, 0);
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: total_bill,
+          },
+        },
+      ],
+    });
+  };
+
   onCancel = (data) => {
-   
+    // User pressed "cancel" or close Paypal's popup!
     console.log("The payment was cancelled!", data);
     this.setState({
       paymentError: true,
@@ -96,13 +115,22 @@ class ShoppingCart extends Component {
                   <h5>Checkout for {total_bill}$</h5>
                 </div>
                 <div>
-                  <PaypalExpressBtn
+                  {/* <PaypalExpressBtn
                     client={client}
                     currency={"USD"}
                     total={total_bill}
                     onError={this.onError}
                     onSuccess={this.onSuccess}
                     onCancel={this.onCancel}
+                  /> */}
+                  <PayPalButton
+                  createOrder={this.cretaeOrder}
+                  client={client}
+                  currency={"USD"}
+                  total = {total_bill}
+                  onError={this.onError}
+                  onApprove={this.onSuccess}
+                  onCancel={this.onCancel}
                   />
                 </div>
               </div>
