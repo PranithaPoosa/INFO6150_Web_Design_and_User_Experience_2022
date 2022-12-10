@@ -6,7 +6,7 @@ import "../App.css";
 import Body from "./Body";
 import Form from "./form";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
-// import DescInAccordion from "./DescInAccordion";
+
 import Footer from "./Footer";
 import { JustifyRight } from "react-bootstrap-icons";
 

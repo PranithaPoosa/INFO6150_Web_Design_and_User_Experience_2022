@@ -11,9 +11,7 @@ import Alert from "react-bootstrap/Alert";
 import { withRouter } from "react-router-dom";
 
 const client = {
-  // sb-rdtbs23227543@business.example.com
-  // EDfxs9iV8iP-2j6-uKsLfVxe3kf-VLE0qdhZTSxUYvvdC8Zl-Rd3IwRbxecczcCtnm9HR8aYXa9zvVlm
-  // e=Tn"G4v
+ 
   sandbox:
     "AU2rXq8U3gv67iXcjPsOTR7Lp7EQah86Q9GjOzodaaOwIJzdCd6PZRpH9c-OOZ_PSik5nn94lm87Gtw1",
   production: "",
